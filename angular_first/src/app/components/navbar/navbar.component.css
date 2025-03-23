@@ -1,0 +1,16 @@
+.container{
+    background-color: #333;
+    color:white;
+    padding: 10px;
+    width:100%;
+}
+.container button{
+    /* position: fixed; */
+    margin-left: auto;
+    
+}
+.container span{
+    /* margin-left: auto; */
+    text-shadow: 2px;
+    text-size-adjust: 5px;
+}

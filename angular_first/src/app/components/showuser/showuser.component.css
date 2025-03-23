@@ -1,0 +1,17 @@
+.container .card{
+    text-align: center;
+    margin: auto;
+
+}
+.container .card table{
+    width: 50%;
+    background-color: beige;
+    text-align: center;
+    margin: auto;
+    border: 2px solid rgb(7, 7, 7);
+    table-layout: auto;
+  border-collapse: collapse;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
