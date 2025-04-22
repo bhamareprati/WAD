@@ -1,0 +1,122 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>jQuery Mobile</title>
+	<link rel="stylesheet" href="themes/test.min.css" />
+	<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+	<!-- Page 1 -->
+    <div data-role="page" id="page1" data-theme="a">
+        <div data-role="header">
+            <h1>Home</h1>
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#page1" class="ui-button-active">Home</a></li>
+					<li><a href="#page2">About us</a></li>
+				</ul>
+			</div><!-- /navbar -->
+        </div>
+        <div data-role="content">
+			<div mbsc-card>
+				<div class="mbsc-card-header">
+					<img src="https://img.mobiscroll.com/demos/mr-profile2.png" class="mbsc-avatar">
+					<h5 class="mbsc-card-title mbsc-bold">Carl Obama</h5>
+					<div class="mbsc-card-subtitle"> at 5:16 PM</div>
+				</div>
+				<img src="https://img.mobiscroll.com/demos/Blueberry.png">
+				<div class="mbsc-card-content">
+					Yeaahhh :D :D :D I've made it. It took me 3 months to improve my blueberry cake. But it's perfect now. :P
+				</div>
+				<div class=" mbsc-card-footer ">
+					<button class="mbsc-btn mbsc-btn-flat" data-icon="heart"></button>
+					<button class="mbsc-btn mbsc-btn-flat" data-icon="thumbs-up2"></button>
+					<button class="mbsc-btn mbsc-btn-flat" data-icon="material-message"></button>
+					<button class="mbsc-btn mbsc-btn-flat" data-icon="tag"></button>
+				</div>
+			</div>
+			
+			<div mbsc-card>
+				<div class="mbsc-card-header">
+					<img src="https://img.mobiscroll.com/demos/mrs-profile1.png" class="mbsc-avatar">
+					<h5 class="mbsc-card-title mbsc-bold">Hortense Tinker</h5>
+					<div class="mbsc-card-subtitle"> at 4:55 PM</div>
+				</div>
+				<img src="https://img.mobiscroll.com/demos/card_1.png">
+				<div class="mbsc-card-content">
+					Best places to seek silence !!! The Dhamma Giri, a vipassana meditation retreat.
+				</div>
+				<div class=" mbsc-card-footer mbsc-align-right">
+					<button class="mbsc-btn mbsc-btn-flat" data-icon="fa-mail-reply"></button>
+					<button class="mbsc-btn mbsc-btn-flat" data-icon="star3">3</button>
+					<button class="mbsc-btn mbsc-btn-flat" data-icon="fa-retweet">5</button>
+					<button class="mbsc-btn mbsc-btn-flat" data-icon="fa-ellipsis-h"></button>
+				</div>
+			</div>
+			
+			
+			<div mbsc-card>
+				<div class="mbsc-card-header">
+					<img src="https://img.mobiscroll.com/demos/mr-profile1.png" class="mbsc-avatar">
+					<h5 class="mbsc-card-title mbsc-bold">John Bush</h5>
+					<div class="mbsc-card-subtitle"> at 2:23 PM</div>
+				</div>
+				<img src="https://img.mobiscroll.com/demos/account-background.jpg">
+				<div class="mbsc-card-content">
+					Best trip ever!!! :D I'll definetly come back here. :)
+				</div>
+				<div class=" mbsc-card-footer ">
+					<button class="mbsc-btn mbsc-btn-flat">Like</button>
+					<button class="mbsc-btn mbsc-btn-flat">Share</button>
+				</div>
+			</div>
+			
+			<div mbsc-card>
+				<div class="mbsc-card-header">
+					<img src="https://img.mobiscroll.com/demos/mrs-profile2.png" class="mbsc-avatar">
+					<h5 class="mbsc-card-title mbsc-bold">Jenna Doe</h5>
+					<div class="mbsc-card-subtitle"> at 1:16 PM</div>
+				</div>
+				<img src="https://img.mobiscroll.com/demos/card_2.png">
+				<div class="mbsc-card-content">
+					There is a new baby panda at the zoo.... :) :O :D
+				</div>
+				<div class=" mbsc-card-footer mbsc-align-right">
+					<button class="mbsc-btn mbsc-btn-flat" data-icon="fa-mail-reply"></button>
+					<button class="mbsc-btn mbsc-btn-flat" data-icon="star3">19</button>
+					<button class="mbsc-btn mbsc-btn-flat" data-icon="fa-retweet">3</button>
+					<button class="mbsc-btn mbsc-btn-flat" data-icon="fa-ellipsis-h"></button>
+				</div>
+			</div>
+            <a href="#page2" data-role="button" data-transition="pop">Go to About Us</a>
+        </div>
+    </div>
+
+    <!-- Page 2 -->
+    <div data-role="page" id="page2" data-theme="b">
+        <div data-role="header">
+            <h1>About Us</h1>
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#page1" class="ui-button-active">Home</a></li>
+					<li><a href="#page2">About us</a></li>
+				</ul>
+			</div><!-- /navbar -->
+        </div>
+        <div data-role="content">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste magnam quas dolorem deserunt, atque aut necessitatibus perferendis ea fugiat expedita.</p>
+			<h2>Jane Doe</h2>
+        <p>CEO & Founder</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>jane@example.com</p>
+        <p><button>Contact</button></p>
+			
+            <a href="#page1" data-role="button" data-transition="fade">Back</a>
+        </div>
+    </div>
+</body>
+</html>
