@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pratiksha's Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #d5c6e0, #aaa1c8);
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .navbar {
+            width: 100%;
+            background-color: rgba(133, 138, 227, 0.9);
+            border: 2px solid #5a5fcf;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .navbar img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-left: 20px;
+        }
+        
+        .nav-links {
+            display: flex;
+            align-items: center;
+        }
+        
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            margin: 0 5px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border-radius: 5px;
+        }
+        
+        .navbar a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+        
+        .navbar button {
+            padding: 10px 20px;
+            background-color: #d5c6e0;
+            color: #333;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            margin-right: 20px;
+        }
+        
+        .navbar button:hover {
+            background-color: #b8a9c4;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        section {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        #About {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            margin: 30px auto;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        #About .row {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        
+        #About .column {
+            padding: 20px;
+        }
+        
+        #About .column:first-child {
+            flex: 2;
+            min-width: 300px;
+        }
+        
+        #About .column:last-child {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+        
+        #About img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #858ae3;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        #About h1 {
+            color: #5a5fcf;
+            margin-bottom: 10px;
+            font-size: 2.5rem;
+        }
+        
+        #About h3 {
+            color: #858ae3;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+        
+        #Project {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            margin: 30px auto;
+            padding: 40px 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        #Project h1, #Skills h1 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #5a5fcf;
+            font-size: 2.5rem;
+            position: relative;
+        }
+        
+        #Project h1::after, #Skills h1::after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 4px;
+            background: #858ae3;
+            margin: 10px auto;
+            border-radius: 2px;
+        }
+        
+        .projects-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            width: 100%;
+            max-width: 350px;
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .container {
+            padding: 20px;
+        }
+        
+        .container h2 {
+            color: #5a5fcf;
+            margin-bottom: 10px;
+        }
+        
+        #Skills {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            margin: 30px auto;
+            padding: 40px 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        .skill-item {
+            width: 100%;
+            max-width: 500px;
+            margin-bottom: 20px;
+        }
+        
+        .skill-name {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        
+        .skill-bar {
+            height: 10px;
+            background: #e0e0e0;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        
+        .skill-level {
+            height: 100%;
+            background: linear-gradient(90deg, #858ae3, #5a5fcf);
+            border-radius: 5px;
+        }
+        
+        #Certification {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            margin: 30px auto;
+            padding: 40px 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        #Certification h1 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #5a5fcf;
+            font-size: 2.5rem;
+            position: relative;
+        }
+        
+        #Certification h1::after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 4px;
+            background: #858ae3;
+            margin: 10px auto;
+            border-radius: 2px;
+        }
+        
+        .certifications-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+        
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                padding: 15px;
+            }
+            
+            .nav-links {
+                margin-top: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .navbar button {
+                margin: 15px 0 0 0;
+            }
+            
+            #About .row {
+                flex-direction: column;
+            }
+            
+            #About .column:first-child {
+                order: 2;
+            }
+            
+            #About .column:last-child {
+                order: 1;
+                margin-bottom: 30px;
+            }
+            
+            .card {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <img src="logo.png" alt="logo">
+        <div class="nav-links">
+            <a href="#About"><i class="fas fa-user"></i> About</a>
+            <a href="#Project"><i class="fas fa-project-diagram"></i> Projects</a>
+            <a href="#Skills"><i class="fas fa-code"></i> Skills</a>
+            <a href="#Certification"><i class="fas fa-certificate"></i> Certifications</a>
+            <button type="button"><i class="fas fa-download"></i> Download CV</button>
+        </div>
+    </div>
+
+    <section id="About">
+        <div class="row">
+            <div class="column">
+                <h1>Bhamare Pratiksha</h1>
+                <h3>Web Developer</h3>
+                <p>Passionate web developer with expertise in creating responsive and user-friendly websites. I specialize in front-end development with a strong foundation in back-end technologies, delivering seamless digital experiences.</p>
+                <p>With 3 years of professional experience, I've worked on diverse projects ranging from e-commerce platforms to content management systems. My approach combines technical skills with creative problem-solving to build efficient and visually appealing web applications.</p>
+                <p>When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or mentoring aspiring developers.</p>
+            </div>
+            <div class="column">
+                <img src="mine.jpg" alt="Pratiksha's Photo">
+            </div>
+        </div>
+    </section>
+
+    <section id="Project">
+        <h1>Projects</h1>
+        <div class="projects-container">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1585829365295-ab7cd400c7e9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="News Reader">
+                <div class="container">
+                    <h2>News Reader</h2>
+                    <p>A responsive news aggregator that curates articles from multiple sources. Features include personalized feeds, dark mode, and offline reading capability.</p>
+                    <p><strong>Technologies:</strong> React, Node.js, MongoDB</p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1511&q=80" alt="Personal Finance Manager">
+                <div class="container">
+                    <h2>Personal Finance Manager</h2>
+                    <p>Comprehensive financial tracking application with budgeting tools, expense categorization, and visual analytics for better money management.</p>
+                    <p><strong>Technologies:</strong> Angular, Firebase, Chart.js</p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRqynDIDzG09Npu10-JzNjDZQbaltr4EcVsA&s" alt="Student Management System">
+                <div class="container">
+                    <h2>Student Management System</h2>
+                    <p>School administration software handling student records, attendance, grades, and communication between teachers and parents.</p>
+                    <p><strong>Technologies:</strong> HBS,Express, MySQL</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="Skills">
+        <h1>Skills</h1>
+        <div class="skills-container">
+            <div class="skill-item">
+                <div class="skill-name">
+                    <span>Frontend Development</span>
+                    <span>95%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 95%;"></div>
+                </div>
+            </div>
+            
+            <div class="skill-item">
+                <div class="skill-name">
+                    <span>Backend Development</span>
+                    <span>85%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 85%;"></div>
+                </div>
+            </div>
+            
+            <div class="skill-item">
+                <div class="skill-name">
+                    <span>Database Management</span>
+                    <span>90%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 90%;"></div>
+                </div>
+            </div>
+            
+            <div class="skill-item">
+                <div class="skill-name">
+                    <span>UI/UX Design</span>
+                    <span>80%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 80%;"></div>
+                </div>
+            </div>
+            
+            <div class="skill-item">
+                <div class="skill-name">
+                    <span>Project Management</span>
+                    <span>75%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 75%;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="Certification">
+        <h1>Certifications</h1>
+        <div class="certifications-container">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1501504905252-473c47e087f8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Certification 1">
+                <div class="container">
+                    <h2>Full Stack Web Development</h2>
+                    <p>Certified by XYZ Institute, 2022</p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Certification 2">
+                <div class="container">
+                    <h2>Advanced JavaScript</h2>
+                    <p>Certified by ABC Academy, 2021</p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" alt="Certification 3">
+                <div class="container">
+                    <h2>Cloud Computing Fundamentals</h2>
+                    <p>Certified by DEF University, 2020</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
